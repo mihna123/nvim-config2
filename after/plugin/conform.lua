@@ -9,6 +9,7 @@ conform.setup({
         html = { "prettier" },
         css = { "prettier" },
         json = { "prettier" },
+        python = { "autopep8", lsp_format = "first" }
     },
     format_on_save = {
         timeout_ms = 500,

@@ -4,6 +4,7 @@ vim.lsp.enable("html");
 vim.lsp.enable("cssls");
 vim.lsp.enable("eslint");
 vim.lsp.enable("pyright");
+vim.lsp.enable("ruff");
 -- vim.lsp.enable("angularls"); -- When you need angular again uncomment
 
 vim.api.nvim_create_autocmd('LspAttach', {
