@@ -3,10 +3,12 @@ return {
     branch = 'master',
     lazy = false,
     build = ":TSUpdate",
-    opts = {
-        highlight = { enable = true },
-        indent = { enable = true },
-        ensure_installed = { "javascript", "lua", "typescript", "html", "css", "python" }
-    },
+    config = function()
+        require("nvim-treesitter.configs").setup {
+            highlight = { enable = true },
+            indent = { enable = true },
+            ensure_installed = { "javascript", "lua", "typescript", "html", "css", "python" }
+        }
+    end,
     additional_vim_regex_highlighting = false
 }
