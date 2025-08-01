@@ -6,6 +6,7 @@ return {
     opts = {
         highlight = { enable = true },
         indent = { enable = true },
-        ensure_installed = { "javascript", "lua", "typescript", "html", "css", "python"}
-    }
+        ensure_installed = { "javascript", "lua", "typescript", "html", "css", "python" }
+    },
+    additional_vim_regex_highlighting = false
 }
