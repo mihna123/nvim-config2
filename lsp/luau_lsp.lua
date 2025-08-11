@@ -12,7 +12,22 @@
 --- autocmd BufRead,BufNewFile *.luau setf luau
 --- ```
 return {
-    cmd = { 'luau-lsp', 'lsp' },
+    cmd = { 'luau-lsp', 'lsp', '--definitions=globalTypes.d.luau' },
     filetypes = { 'luau' },
     root_markers = { '.git' },
+    settings = {
+        completion = {
+            suggestImports = true,
+            autocompleteEnd = true,
+            imports = {
+                enabled = true,
+            }
+        },
+        platform = {
+            type = "roblox"
+        },
+        diagnostics = {
+            workspace = true
+        }
+    }
 }
