@@ -7,6 +7,7 @@ vim.lsp.enable("pyright")
 vim.lsp.enable("ruff")
 vim.lsp.enable("luau_lsp")
 vim.lsp.enable("tailwindcss")
+vim.lsp.enable("ltex")
 -- vim.lsp.enable("angularls"); -- When you need angular again uncomment
 
 vim.api.nvim_create_autocmd('LspAttach', {
