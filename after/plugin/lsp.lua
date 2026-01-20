@@ -9,7 +9,7 @@ vim.lsp.enable("luau_lsp")
 vim.lsp.enable("tailwindcss")
 vim.lsp.enable("ltex")
 vim.lsp.enable("vue_ls")
-vim.lsp.enable("vtsls")
+-- vim.lsp.enable("vtsls")
 -- vim.lsp.enable("angularls"); -- When you need angular again uncomment
 
 vim.api.nvim_create_autocmd('LspAttach', {
