@@ -23,6 +23,13 @@ return {
     cmd = { 'vue-language-server', '--stdio' },
     filetypes = { 'vue' },
     root_markers = { 'package.json', '.git' },
+    settings = {
+        vue = {
+            format = {
+                enable = false
+            }
+        }
+    },
     on_init = function(client)
         local retries = 0
 
