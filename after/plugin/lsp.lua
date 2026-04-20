@@ -1,5 +1,5 @@
 vim.lsp.enable("luals")
--- vim.lsp.enable("ts_ls") -- When you need vue comment
+vim.lsp.enable("ts_ls")
 vim.lsp.enable("html")
 -- vim.lsp.enable("cssls")
 vim.lsp.enable("eslint")
@@ -9,7 +9,7 @@ vim.lsp.enable("luau_lsp")
 vim.lsp.enable("tailwindcss")
 vim.lsp.enable("ltex")
 vim.lsp.enable("vue_ls") -- When you need vue uncomment
-vim.lsp.enable("vtsls")  -- When you need vue uncomment
+-- vim.lsp.enable("vtsls")  -- When you need vue uncomment
 -- vim.lsp.enable("angularls"); -- When you need angular again uncomment
 
 vim.api.nvim_create_autocmd('LspAttach', {

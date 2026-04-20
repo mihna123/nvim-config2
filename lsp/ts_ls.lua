@@ -71,8 +71,21 @@
 --- `filetypes` is extended here to include Vue SFC.
 local capabilities = require("cmp_nvim_lsp").default_capabilities();
 
+local vue_language_server_path = vim.fn.expand '$MASON/packages' ..
+    '/vue-language-server/node_modules/@vue/language-server'
+
+local vue_plugin = {
+    name = '@vue/typescript-plugin',
+    location = vue_language_server_path,
+    languages = { 'vue' },
+    configNamespace = 'typescript',
+}
+
 return {
-    init_options = { hostInfo = 'neovim' },
+    init_options = {
+        hostInfo = 'neovim',
+        plugins = { vue_plugin },
+    },
     cmd = { 'typescript-language-server', '--stdio' },
     filetypes = {
         'javascript',
@@ -81,6 +94,7 @@ return {
         'typescript',
         'typescriptreact',
         'typescript.tsx',
+        'vue'
     },
     root_markers = { 'tsconfig.json', 'jsconfig.json', 'package.json', '.git' },
     handlers = {
