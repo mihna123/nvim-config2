@@ -4,9 +4,13 @@ vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>pg', function()
-    local gsearch = vim.fn.input('Grep > ');
-    if gsearch == "" then
-        return
+    local success, res = pcall(vim.fn.input, 'Grep >');
+    if not success then
+        print(res)
+        return;
     end
-    builtin.grep_string({ search = gsearch })
+
+    if res == '' then return end
+
+    builtin.grep_string({ search = res })
 end)
